@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model Survey {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+
+    userId String
+
+    desired_skills String[]
+
+    age_group String
+
+    location String
+
+    preferred_format String // date
+    preferred_days   String[] // date
+    preferred_time   String[] // date
+}
