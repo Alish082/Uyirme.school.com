@@ -31,6 +31,13 @@ export default function Home() {
   const createSurvey = api.post.create.useMutation({
     onSuccess: ()=>{
       close()
+    },
+    onError: (v)=> {
+      if(v.data) {
+        if(v.data.code === "CONFLICT"){
+          close()
+        }
+      }
     }
   });
   const signIn = useSignIn()
