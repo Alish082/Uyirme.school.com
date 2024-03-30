@@ -23,6 +23,17 @@ interface SkillData {
 }
 type ReturnData = {name: string, online: number, offline: number}[]
 
+// Function to get the top 5 names (skills) based on online count
+function getTopSkills(data: ReturnData): ReturnData {
+  // Sort the data based on online count in descending order
+  const sortedData = data.sort((a, b) => (b.online + b.offline) - (a.online + a.offline));
+  
+  // Extract the top 5 names
+  const topSkills = sortedData.slice(0, 5);
+  
+  return topSkills;
+}
+
 const countSkillsByFormat = (jsonData: SkillData[]): ReturnData => {
   const skillCounts: Record<string, { online: number; offline: number }> = {};
 
@@ -51,7 +62,7 @@ export const postRouter = createTRPCRouter({
         preferred_format: true
       }
     })
-    const returnedData: ReturnData= countSkillsByFormat(count)
+    const returnedData: ReturnData= getTopSkills(countSkillsByFormat(count))
 
     return {data: returnedData};
     
