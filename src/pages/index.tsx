@@ -118,7 +118,7 @@ const [opened, { open, close }] = useDisclosure(false);
       <header >
         <Container>
         <Group justify="space-between" py={"sm"}>
-        <img src="/favicon.png"></img>
+        <img src="img/favicon.png"></img>
           <Group>
           <Button onClick={()=> open()}>Open</Button>
       <UserButton />
@@ -137,7 +137,7 @@ const [opened, { open, close }] = useDisclosure(false);
                 dataKey="name"
                 series={[
                   { name: 'online', color: '#FFB608' },
-                  { name: 'offline', color: 'teal.6' },
+                  { name: 'offline', color: '#FFFFFF' },
                 ]}
                 tickLine="y"
                 type="stacked"
