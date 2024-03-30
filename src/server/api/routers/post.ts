@@ -24,7 +24,7 @@ interface SkillData {
 type ReturnData = {name: string, online: number, offline: number}[]
 
 const countSkillsByFormat = (jsonData: SkillData[]): ReturnData => {
-  const skillCounts: { [name: string]: { online: number; offline: number } } = {};
+  const skillCounts: Record<string, { online: number; offline: number }> = {};
 
   jsonData.forEach((entry) => {
     const format = entry.preferred_format;
