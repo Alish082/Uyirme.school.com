@@ -4,9 +4,7 @@ import Head from "next/head";
 import { TextInput, Checkbox, Button, Group, Box, Select, MultiSelect, Modal, Container} from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { api } from "~/utils/api";
-import { text } from "stream/consumers";
 import { BarChart } from '@mantine/charts';
-import { data } from './data';
 import { useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 
