@@ -24,10 +24,15 @@ export default function Home() {
 
     validate: {},
   });
-  const createSurvey = api.post.create.useMutation();
+  
   const query = api.post.stats.useQuery();
   const [searchValue, SetsearchValue] = useState<string>("")
   const [opened, { open, close }] = useDisclosure(false);
+  const createSurvey = api.post.create.useMutation({
+    onSuccess: ()=>{
+      close()
+    }
+  });
   const signIn = useSignIn()
   const user = useUser()
   return (
