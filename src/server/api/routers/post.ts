@@ -79,6 +79,7 @@ export const postRouter = createTRPCRouter({
       await ctx.db.survey.create({
         data: {
           userId: ctx.auth.userId,
+          email: ctx.auth.user?.emailAddresses[0]?.emailAddress,
           desired_skills: input.survey.desired_skills,
           age_group: input.survey.age_group,
           location: input.survey.location,

@@ -12,7 +12,7 @@ datasource db {
 
 model Survey {
     id String @id @default(auto()) @map("_id") @db.ObjectId
-
+    email String?
     userId String
 
     desired_skills String[]
