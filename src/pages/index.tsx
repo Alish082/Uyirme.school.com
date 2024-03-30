@@ -1,4 +1,4 @@
-import { UserButton } from "@clerk/nextjs";
+import { SignInButton, UserButton, useSignIn, useUser } from "@clerk/nextjs";
 import Head from "next/head";
 
 import { TextInput, Checkbox, Button, Group, Box, Select, MultiSelect, Modal, Container } from "@mantine/core";
@@ -28,7 +28,8 @@ export default function Home() {
   const query = api.post.stats.useQuery();
   const [searchValue, SetsearchValue] = useState<string>("")
   const [opened, { open, close }] = useDisclosure(false);
-
+  const signIn = useSignIn()
+  const user = useUser()
   return (
     <>
       <Head>
@@ -119,8 +120,18 @@ export default function Home() {
           <Group justify="space-between" py={"sm"}>
             <Image src="/logo.png" width={60} height={60} alt="" />
             <Group>
-              <Button onClick={() => open()}>Open</Button>
-              <UserButton />
+              {
+                user.isSignedIn ? (
+                  <>
+                    <Button onClick={() => {
+                      open()
+                    }}>  Take a survey</Button>
+                    <UserButton />
+                  </>
+                ) : (
+                  <SignInButton />
+                )
+              }
             </Group>
 
           </Group>
