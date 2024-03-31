@@ -84,7 +84,7 @@ export default function Home() {
               {...form.getInputProps("skills")}
               searchValue={searchValue}
               onSearchChange={SetsearchValue}
-              nothingFoundMessage={<Button onClick={() => {
+              nothingFoundMessage={<Button style={{backgroundColor: '#FFB608',color: 'white'}} onClick={() => {
                 form.setValues({
                   skills: [...form.values.skills, searchValue]
                 })
@@ -122,7 +122,7 @@ export default function Home() {
 
 
             <Group justify="flex-end" mt="md">
-              <Button type="submit">Submit</Button>
+              <Button style={{backgroundColor: '#FFB608',color: 'white'}} type="submit">Submit</Button>
             </Group>
           </form>
         </Box>
