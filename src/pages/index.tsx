@@ -135,7 +135,7 @@ export default function Home() {
               {
                 user.isSignedIn ? (
                   <>
-                    <Button onClick={() => {
+                    <Button style={{backgroundColor: '#FFB608',color: 'white'}} onClick={() => {
                       open()
                     }}>  Take a survey</Button>
                     <UserButton />
