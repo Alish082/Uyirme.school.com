@@ -171,7 +171,7 @@ export default function Home() {
         <div style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
       {/* Oval Button */}
       <button style={{ backgroundColor: '#003a7d', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '50px' }}>
-        <a href="mailto:first.gfo.ohio@mail.ru" style={{ textDecoration: 'none', color: 'white' }}>Support service</a>
+        <a href="mailto:first.gfo.ohio@mail.ru" style={{ textDecoration: 'none', color: 'white' }}>OFFER</a>
       </button>
     </div>
       </main>
