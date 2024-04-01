@@ -1,7 +1,7 @@
 import { SignInButton, UserButton, useSignIn, useUser } from "@clerk/nextjs";
 import Head from "next/head";
 
-import { TextInput, Checkbox, Button, Group, Box, Select, MultiSelect, Modal, Container } from "@mantine/core";
+import { TextInput, Checkbox, Button, Group, Box, Select, MultiSelect, Modal, Container, BackgroundImage } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { api } from "~/utils/api";
 import { BarChart } from '@mantine/charts';
@@ -80,7 +80,7 @@ export default function Home() {
               label="What kind of activities do you like?"
               searchable
               placeholder="Pick value"
-              data={['Vocals', 'BOX', 'Football', 'Voleyball', 'Basketball', 'Programming', 'Piano', 'Dombyra', 'Wrestling', 'Workout', 'Painting', 'Chess']}
+              data={['Vocals', 'BOX', 'Football', 'Voleyball', 'Basketball', 'Programming', 'Piano', 'Dombyra', 'Wrestling', 'Workout', 'Painting', 'Chess','ART club','Reading club','Debate club','Robotics']}
               {...form.getInputProps("skills")}
               searchValue={searchValue}
               onSearchChange={SetsearchValue}
@@ -106,7 +106,7 @@ export default function Home() {
             <MultiSelect
               label="Prefered days"
               placeholder="Pick value"
-              data={['Monday', 'Tuesday', 'Wednesday', 'Thuresday', 'Friday', 'Saterday', 'Sunday']}
+              data={['Monday', 'Tuesday', 'Wednesday', 'Thuresday', 'Friday', 'Saturday', 'Sunday']}
               defaultValue={['Monday']}
               clearable
               {...form.getInputProps("day_format")}
@@ -124,7 +124,7 @@ export default function Home() {
 
             <Group justify="flex-end" mt="md">
               <Button style={{backgroundColor: '003a7d',color: 'white'}} type="submit">Submit</Button>
-            </Group>
+            </Group>px
           </form>
         </Box>
       </Modal>
@@ -168,7 +168,12 @@ export default function Home() {
             ) : <></>
           }
         </Container>
-
+        <div style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+      {/* Oval Button */}
+      <button style={{ backgroundColor: '#003a7d', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '50px' }}>
+        <a href="mailto:first.gfo.ohio@mail.ru" style={{ textDecoration: 'none', color: 'white' }}>Support service</a>
+      </button>
+    </div>
       </main>
     </>
   );
