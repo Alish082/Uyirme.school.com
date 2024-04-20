@@ -168,10 +168,16 @@ export default function Home() {
             ) : <></>
           }
         </Container>
-        <div style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+        <div style={{ position: 'fixed', bottom: '20px', left: '40%', transform: 'translateX(40%)' }}>
       {/* Oval Button */}
-      <button style={{ backgroundColor: '#003a7d', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '50px' }}>
-        <a href="mailto:first.gfo.ohio@gmail.ru" style={{ textDecoration: 'none', color: 'white' }}>OFFER</a>
+      <button style={{ backgroundColor: '#003a7d', color: 'white', padding: '10px 40px', border: 'none', borderRadius: '50px' }}>
+        <a href="mailto:first.gfo.ohio@gmail.ru" style={{ textDecoration: 'none', color: 'white' }}>Offer</a>
+      </button>
+               
+    </div>
+    <div  style={{ position: 'fixed', bottom: '20px', right: '40%', transform: 'translateX(-10%)' }}>
+    <button style={{ backgroundColor: '#003a7d', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '50px' }}>
+        <a href="https://www.instagram.com/first.gfo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{ textDecoration: 'none', color: 'white' }}>Instagram</a>
       </button>
     </div>
       </main>
