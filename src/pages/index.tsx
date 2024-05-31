@@ -164,14 +164,19 @@ export default function Home() {
                 Submit
               </Button>
             </Group>
-            px
           </form>
         </Box>
       </Modal>
       <header>
         <Container>
           <Group justify="space-between" py={"sm"}>
-            <Image src="/logo1.png" width={90} height={90} alt="" />
+            <Image
+              style={{ borderRadius: 50 }}
+              src="/DYC.jpg"
+              width={90}
+              height={90}
+              alt=""
+            />
             <Group>
               {user.isSignedIn ? (
                 <>
